@@ -5,6 +5,8 @@ import Celulares from  "./Celulares";
 import CreateCelular from "./CreateCelular";
 import UpdateCelular from "./UpdateCelular";
 import Juegos from "./Juegos";
+import CreateJuego from "./CreateJuego";
+import UpdateJuego from "./UpdateJuego";
 import Menu from "./Menu";
 import Inicio from "./Home";
 
@@ -21,7 +23,9 @@ export default function App() {
         <Route path="/celulares" element={<Celulares api={apiCelulares} />} />
         <Route path="/celulares/CreateCelular" element={<CreateCelular api={apiCelulares} />} />
         <Route path="/celulares/UpdateCelular" element={<UpdateCelular api={apiCelulares} />} />
-        <Route path="/juegos" element={<Juegos api={apiJuegos} />} />    
+        <Route path="/juegos" element={<Juegos api={apiJuegos} />} />
+        <Route path="/juegos/CreateJuego" element={<CreateJuego api={apiJuegos} />} />
+        <Route path="/juegos/UpdateJuego" element={<UpdateJuego api={apiJuegos} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

@@ -46,14 +46,14 @@ export default function UpdateCelular({ api }) {
       
       if(data.status === 1){
         alert(data.message);
-        navigate("/celulares");      }
+        navigate("/celulares");      
+      }
 
     }catch(error){
       alert(error);
-      console.log(error);
+      console.error(error);
     }
   }
-
 
   return (
     <div className="mainCelulares">
@@ -62,7 +62,7 @@ export default function UpdateCelular({ api }) {
             <Form className="create-form">
                 <Form.Field>
                     <label>Celular Id</label>
-                    <input placeholder="Celular Id" value={celularId} onChange={(e) => setMarca(e.target.value)} readOnly/>
+                    <input placeholder="Celular Id" value={celularId} onChange={(e) => setCelularId(e.target.value)} readOnly/>
                 </Form.Field>
                 <Form.Field>
                     <label>Marca</label>

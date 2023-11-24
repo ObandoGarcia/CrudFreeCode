@@ -5,8 +5,20 @@
     justify-content: center;
     align-items: center;
     height:  100vh;
+    color: whitesmoke;
+    flex-direction: column;
 }
 
 .mainJuegos-header {
     font-family: 'Montserrat', sans-serif;
+}
+
+.create-form label{color: whitesmoke !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px !important;    
+}
+
+.create-form input::placeholder{
+    color: black !important;
+    font-weight: bold;
 }

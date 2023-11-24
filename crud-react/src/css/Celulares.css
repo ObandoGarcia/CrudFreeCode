@@ -17,4 +17,9 @@
     color: whitesmoke !important;
     font-family: 'Montserrat', sans-serif;
     font-size: 12px !important;
-  }
+}
+
+.create-form input::placeholder{
+    color: black !important;
+    font-weight: bold;
+}

@@ -11,7 +11,7 @@ export default function Celulares({ api }) {
   //Cargar los elementos al momento de cargar el componente
   useEffect(() => {
     cargarCelulares();
-  }, []);
+  });
 
   //Listar los elementos en la tabla
   async function cargarCelulares() {
@@ -21,7 +21,7 @@ export default function Celulares({ api }) {
       })
     }catch(error){
       alert(error);
-      console.log(error);
+      console.error(error);
     }
   }
 
@@ -53,7 +53,7 @@ export default function Celulares({ api }) {
         alert("El registro que intentas eliminar ya no existe");
       }else{
         alert(error);
-        console.log(error);
+        console.error(error);
       }
     }
   } 
