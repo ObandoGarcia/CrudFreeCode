@@ -8,11 +8,6 @@ export default function Celulares({ api }) {
 
   const [celulares, setCelularApiData] = useState([]);  
 
-  //Cargar los elementos al momento de cargar el componente
-  useEffect(() => {
-    cargarCelulares();
-  });
-
   //Listar los elementos en la tabla
   async function cargarCelulares() {
     try{ 
@@ -58,6 +53,11 @@ export default function Celulares({ api }) {
     }
   } 
   
+  //Cargar los elementos al momento de cargar el componente
+  useEffect(() => {
+    cargarCelulares();
+  });
+
   return (
       <div className="mainCelulares">
         <h2 className='mainCelulares-header'>Administracion de Celulares</h2>

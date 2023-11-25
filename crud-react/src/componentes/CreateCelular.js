@@ -31,7 +31,6 @@ export default function CreateCelular({ api }){
         postData(data);
     }
 
-
     return(
         <div className="mainCelulares">
             <h2 className='mainCelulares-header'>Agregar un nuevo celular</h2>

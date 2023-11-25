@@ -8,11 +8,6 @@ export default function Juegos( { api }) {
 
   const [juegos, setJuegosApiData] =  useState([]);
 
-  //Cargar los elementos al cargar el componente
-  useEffect(() => {
-    cargarJuegos();
-  });
-
   //Listar los elemento en la tabla
   async function cargarJuegos(){
     try{
@@ -55,6 +50,11 @@ export default function Juegos( { api }) {
       }
     }
   }
+  
+  //Cargar los elementos al cargar el componente
+  useEffect(() => {
+    cargarJuegos();
+  });
 
   return (
     <div className="mainJuegos">
