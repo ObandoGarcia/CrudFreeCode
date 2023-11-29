@@ -27,6 +27,7 @@ export default function CreateJuego({ api }) {
   }
 
   const onSubmit = (data) => {
+    console.log(data.precio)
     postData(data);
   }
 
@@ -76,7 +77,7 @@ export default function CreateJuego({ api }) {
                 </Form.Field>
                 <Form.Field>
                     <label>Precio</label>
-                    <input type="number" placeholder="Precio" 
+                    <input type="text" placeholder="Precio" 
                       {
                             ...register('precio', {
                                 required: true      

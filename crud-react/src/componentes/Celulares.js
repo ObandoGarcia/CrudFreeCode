@@ -27,7 +27,7 @@ export default function Celulares({ api }) {
     localStorage.setItem("marca", marca);
     localStorage.setItem("modelo", modelo);
     localStorage.setItem("color", color);
-    localStorage.setItem("precio", precio);
+    localStorage.setItem("precioCelular", precio);
     localStorage.setItem("descripcion", descripcion);
     localStorage.setItem("operadora", operadora);
   }

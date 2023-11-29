@@ -74,7 +74,7 @@ export default function UpdateJuego({ api }) {
                 </Form.Field>
                 <Form.Field>
                     <label>Precio</label>
-                    <input type="number" placeholder="Precio" value={precio} onChange={(e) => setPrecio(e.target.value)} />
+                    <input type="text" placeholder="Precio" value={precio} onChange={(e) => setPrecio(e.target.value)} />
                 </Form.Field>
                 <Form.Field>
                     <label>Categoría</label>

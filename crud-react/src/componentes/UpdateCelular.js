@@ -51,7 +51,7 @@ export default function UpdateCelular({ api }) {
     setMarca(localStorage.getItem("marca"));
     setModelo(localStorage.getItem("modelo"));
     setColor(localStorage.getItem("color"));
-    setPrecio(localStorage.getItem("precio"));
+    setPrecio(localStorage.getItem("precioCelular"));
     setDescripcion(localStorage.getItem("descripcion"));
     setOperadora(localStorage.getItem("operadora"));
   }, []);
