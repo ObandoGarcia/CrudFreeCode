@@ -76,11 +76,10 @@ export default function CreateJuego({ api }) {
                 </Form.Field>
                 <Form.Field>
                     <label>Precio</label>
-                    <input type="text" placeholder="Precio" 
+                    <input type="number" placeholder="Precio" 
                       {
                             ...register('precio', {
-                                required: true,
-                                
+                                required: true      
                             })
                       }
                     />
