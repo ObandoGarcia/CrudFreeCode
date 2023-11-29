@@ -9,7 +9,7 @@ export default function Home() {
         <br />
         <br />
         <br />
-        <h1>Pagina de administracion de productos</h1>
+        <h1>Pagina de administración de productos</h1>
         <div className="row">
           <div className="col-sm-6 mb-3 mb-sm-0">
             <div className="card">
@@ -21,7 +21,7 @@ export default function Home() {
                 <Link to={"/celulares"}><Button color="green"><Icon link name="arrow alternate circle right outline" />  __Ir a la pagina</Button></Link>
               </div>
               <div class="card-footer">
-                <small class="text-body-secondary">Ultima actualizacion hace 15 min</small>
+                <small class="text-body-secondary">Ultima actualización hace 15 min</small>
               </div>
             </div>
             <br />
@@ -35,7 +35,7 @@ export default function Home() {
                 <Link to={"/juegos"}><Button color="green"><Icon link name="arrow alternate circle right outline" />  __Ir a la pagina</Button></Link>
               </div>
               <div class="card-footer">
-                <small class="text-body-secondary">Ultima actualizacion hace 3 min</small>
+                <small class="text-body-secondary">Ultima actualización hace 3 min</small>
               </div>
             </div>
           </div>

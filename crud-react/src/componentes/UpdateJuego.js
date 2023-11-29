@@ -17,16 +17,6 @@ export default function UpdateJuego({ api }) {
   const [precio, setPrecio] = useState("");
   const [categoria, setCategoria] = useState("");
 
-  //Obtener los elementos del almacenamiento local
-  useEffect(() => {
-    setJuegoId(localStorage.getItem("juegoId"));
-    setTitulo(localStorage.getItem("titulo"));
-    setDescripcion(localStorage.getItem("descripcion"));
-    setPlataforma(localStorage.getItem("plataforma"));
-    setPrecio(localStorage.getItem("precio"));
-    setCategoria(localStorage.getItem("categoria"));
-  }, []);
-
   //Funcion de actializar
   async function ActualizarJuegoApiData(){
     try{
@@ -52,33 +42,43 @@ export default function UpdateJuego({ api }) {
     }
   }
 
+   //Obtener los elementos del almacenamiento local
+   useEffect(() => {
+    setJuegoId(localStorage.getItem("juegoId"));
+    setTitulo(localStorage.getItem("titulo"));
+    setDescripcion(localStorage.getItem("descripcion"));
+    setPlataforma(localStorage.getItem("plataforma"));
+    setPrecio(localStorage.getItem("precio"));
+    setCategoria(localStorage.getItem("categoria"));
+  }, []);
+
   return (
     <div className="mainJuegos">
             <h2 className='mainJuegos-header'>Agregar un nuevo juego</h2>
             <Form className="create-form">
                 <Form.Field>
                     <label>Juego Id</label>
-                    <input placeholder="Juego Id" value={juegoId} onChange={(e) => setJuegoId(e.target.value)} readOnly/>
+                    <input type="text" placeholder="Juego Id" value={juegoId} onChange={(e) => setJuegoId(e.target.value)} readOnly/>
                 </Form.Field>
                 <Form.Field>
                     <label>Titulo</label>
-                    <input placeholder="Titulo" value={titulo} onChange={(e) => setTitulo(e.target.value)} />
+                    <input type="text" placeholder="Titulo" value={titulo} onChange={(e) => setTitulo(e.target.value)} />
                 </Form.Field>
                 <Form.Field>
-                    <label>Descripcion</label>
-                    <input placeholder="Descripcion" value={descripcion} onChange={(e) => setDescripcion(e.target.value)} />
+                    <label>Descripción</label>
+                    <input type="text" placeholder="Descripción" value={descripcion} onChange={(e) => setDescripcion(e.target.value)} />
                 </Form.Field>
                 <Form.Field>
                     <label>Plataforma</label>
-                    <input placeholder="Plataforma" value={plataforma} onChange={(e) => setPlataforma(e.target.value)} />
+                    <input type="text" placeholder="Plataforma" value={plataforma} onChange={(e) => setPlataforma(e.target.value)} />
                 </Form.Field>
                 <Form.Field>
                     <label>Precio</label>
-                    <input placeholder="Precio" value={precio} onChange={(e) => setPrecio(e.target.value)} />
+                    <input type="text" placeholder="Precio" value={precio} onChange={(e) => setPrecio(e.target.value)} />
                 </Form.Field>
                 <Form.Field>
-                    <label>Categoria</label>
-                    <input placeholder="Categoria" value={categoria} onChange={(e) => setCategoria(e.target.value)} />
+                    <label>Categoría</label>
+                    <input type="text" placeholder="Categoría" value={categoria} onChange={(e) => setCategoria(e.target.value)} />
                 </Form.Field>
                 <Button type="submit" onClick={ActualizarJuegoApiData}>Enviar</Button>
                 <Link to={"/juegos"}><Button color="red"><Icon link name="delete"/>Cancelar</Button></Link>

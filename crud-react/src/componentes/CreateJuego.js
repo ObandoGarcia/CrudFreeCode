@@ -36,7 +36,7 @@ export default function CreateJuego({ api }) {
             <Form className="create-form" onSubmit={handleSubmit(onSubmit)}>
                 <Form.Field>
                     <label>Titulo</label>
-                    <input placeholder="Titulo"
+                    <input type="text" placeholder="Titulo"
                       {
                             ...register('titulo', {
                                 required: true,
@@ -49,7 +49,7 @@ export default function CreateJuego({ api }) {
                 </Form.Field>
             <Form.Field>
                     <label>Descripcion</label>
-                    <input placeholder="Descripcion" 
+                    <input type="text" placeholder="Descripcion" 
                     {
                             ...register('descripcion', {
                                 required: true,
@@ -62,7 +62,7 @@ export default function CreateJuego({ api }) {
                 </Form.Field>
                 <Form.Field>
                     <label>Plataforma</label>
-                    <input placeholder="Plataforma" 
+                    <input type="text" placeholder="Plataforma" 
                     {
                             ...register('plataforma', {
                                 required: true,
@@ -76,7 +76,7 @@ export default function CreateJuego({ api }) {
                 </Form.Field>
                 <Form.Field>
                     <label>Precio</label>
-                    <input placeholder="Precio" 
+                    <input type="text" placeholder="Precio" 
                       {
                             ...register('precio', {
                                 required: true,
@@ -89,7 +89,7 @@ export default function CreateJuego({ api }) {
                 </Form.Field>
                 <Form.Field>
                     <label>Categoria</label>
-                    <input placeholder="Categoria"  
+                    <input type="text" placeholder="Categoria"  
                       {
                             ...register('categoria', {
                                 required: true,

@@ -18,16 +18,6 @@ export default function UpdateCelular({ api }) {
   const[descripcion, setDescripcion] = useState("");
   const[operadora, setOperadora] = useState("");
 
-  //obtener los elemntos del almacenamiento local
-  useEffect(() => {
-    setCelularId(localStorage.getItem("celId"));
-    setMarca(localStorage.getItem("marca"));
-    setModelo(localStorage.getItem("modelo"));
-    setColor(localStorage.getItem("color"));
-    setPrecio(localStorage.getItem("precio"));
-    setDescripcion(localStorage.getItem("descripcion"));
-    setOperadora(localStorage.getItem("operadora"));
-  }, []);
 
   //Funcion de actualizar
   async function ActualizarCelularApiData(){
@@ -55,6 +45,17 @@ export default function UpdateCelular({ api }) {
     }
   }
 
+  //obtener los elemntos del almacenamiento local
+  useEffect(() => {
+    setCelularId(localStorage.getItem("celId"));
+    setMarca(localStorage.getItem("marca"));
+    setModelo(localStorage.getItem("modelo"));
+    setColor(localStorage.getItem("color"));
+    setPrecio(localStorage.getItem("precio"));
+    setDescripcion(localStorage.getItem("descripcion"));
+    setOperadora(localStorage.getItem("operadora"));
+  }, []);
+
   return (
     <div className="mainCelulares">
         <h2 className='mainCelulares-header'>Actualizar celular</h2>
@@ -62,31 +63,31 @@ export default function UpdateCelular({ api }) {
             <Form className="create-form">
                 <Form.Field>
                     <label>Celular Id</label>
-                    <input placeholder="Celular Id" value={celularId} onChange={(e) => setCelularId(e.target.value)} readOnly/>
+                    <input type="text" placeholder="Celular Id" value={celularId} onChange={(e) => setCelularId(e.target.value)} readOnly/>
                 </Form.Field>
                 <Form.Field>
                     <label>Marca</label>
-                    <input placeholder="Marca" value={marca} onChange={(e) => setMarca(e.target.value)} />
+                    <input type="text" placeholder="Marca" value={marca} onChange={(e) => setMarca(e.target.value)} />
                 </Form.Field>
                 <Form.Field>
                     <label>Modelo</label>
-                    <input placeholder="Modelo" value={modelo} onChange={(e) => setModelo(e.target.value)} />
+                    <input type="text" placeholder="Modelo" value={modelo} onChange={(e) => setModelo(e.target.value)} />
                 </Form.Field>
                 <Form.Field>
                     <label>Color</label>
-                    <input placeholder="Color" value={color} onChange={(e) => setColor(e.target.value)} />
+                    <input type="text" placeholder="Color" value={color} onChange={(e) => setColor(e.target.value)} />
                 </Form.Field>
                 <Form.Field>
                     <label>Precio</label>
-                    <input placeholder="Precio" value={precio} onChange={(e) => setPrecio(e.target.value)} />
+                    <input type="text" placeholder="Precio" value={precio} onChange={(e) => setPrecio(e.target.value)} />
                 </Form.Field>
                 <Form.Field>
-                    <label>Descripcion</label>
-                    <input placeholder="Descripcion" value={descripcion} onChange={(e) => setDescripcion(e.target.value)} />
+                    <label>Descripción</label>
+                    <input type="text" placeholder="Descripción" value={descripcion} onChange={(e) => setDescripcion(e.target.value)} />
                 </Form.Field>
                 <Form.Field>
                     <label>Operadora</label>
-                    <input placeholder="Operadora" value={operadora} onChange={(e) => setOperadora(e.target.value)} />
+                    <input type="text" placeholder="Operadora" value={operadora} onChange={(e) => setOperadora(e.target.value)} />
                 </Form.Field>
                 <Button type="submit" onClick={ActualizarCelularApiData}>Actualizar</Button>
                 <Link to={"/celulares"}><Button color="red"><Icon link name="delete"/>Cancelar</Button></Link>

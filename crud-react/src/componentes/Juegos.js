@@ -73,10 +73,10 @@ export default function Juegos( { api }) {
                 <Table.Row>
                     <Table.HeaderCell>Id Juego</Table.HeaderCell>
                     <Table.HeaderCell>Titulo</Table.HeaderCell>
-                    <Table.HeaderCell>Descripcion</Table.HeaderCell>
+                    <Table.HeaderCell>Descripción</Table.HeaderCell>
                     <Table.HeaderCell>Plataforma</Table.HeaderCell>
                     <Table.HeaderCell>Precio</Table.HeaderCell>
-                    <Table.HeaderCell>Categoria</Table.HeaderCell> 
+                    <Table.HeaderCell>Categoría</Table.HeaderCell> 
                     <Table.HeaderCell>Acciones</Table.HeaderCell>
                 </Table.Row>
             </Table.Header>

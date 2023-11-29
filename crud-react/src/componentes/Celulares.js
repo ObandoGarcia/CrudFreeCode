@@ -60,7 +60,7 @@ export default function Celulares({ api }) {
 
   return (
       <div className="mainCelulares">
-        <h2 className='mainCelulares-header'>Administracion de Celulares</h2>
+        <h2 className='mainCelulares-header'>Administración de Celulares</h2>
         <Link to={"CreateCelular"}><Button color="teal"><Icon link name="plus" />Agregar nuevo celular</Button></Link>
         <h2>
           
@@ -78,7 +78,7 @@ export default function Celulares({ api }) {
                     <Table.HeaderCell>Modelo</Table.HeaderCell>
                     <Table.HeaderCell>Color</Table.HeaderCell>
                     <Table.HeaderCell>Precio</Table.HeaderCell>
-                    <Table.HeaderCell>Descripcion</Table.HeaderCell>
+                    <Table.HeaderCell>Descripción</Table.HeaderCell>
                     <Table.HeaderCell>Operadora</Table.HeaderCell>
                     <Table.HeaderCell>Acciones</Table.HeaderCell>
                 </Table.Row>
@@ -87,7 +87,7 @@ export default function Celulares({ api }) {
                {celulares.map((data, indice) => {
                 return (
                   <Table.Row>
-                    <Table.Cell>{data.celularId}</Table.Cell>
+                    <Table.Cell key={indice}>{data.celularId}</Table.Cell>
                     <Table.Cell>{data.marca}</Table.Cell>
                     <Table.Cell>{data.modelo}</Table.Cell>
                     <Table.Cell>{data.color}</Table.Cell>

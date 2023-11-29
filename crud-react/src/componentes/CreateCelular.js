@@ -46,11 +46,11 @@ export default function CreateCelular({ api }){
                         }
                     />
                     {errors.marca?.type === 'required' && <Label basic color='red' pointing>La marca es requerida</Label>}
-                    {errors.marca?.type === 'minLength' && <Label basic color='red' pointing>La marca debe tener 5 caracteres minimo</Label>}
+                    {errors.marca?.type === 'minLength' && <Label basic color='red' pointing>La marca debe tener 5 caracteres mínimo</Label>}
                 </Form.Field>
                 <Form.Field>
                     <label>Modelo</label>
-                    <input placeholder="Modelo" 
+                    <input type="text" placeholder="Modelo" 
                     {
                         ...register('modelo', {
                             required: true,
@@ -59,12 +59,12 @@ export default function CreateCelular({ api }){
                     }
                      />
                     {errors.modelo?.type === 'required' && <Label basic color='red' pointing>El modelo es requerido</Label>}
-                    {errors.modelo?.type === 'minLength' && <Label basic color='red' pointing>El modelo debe tener 3 caracteres minimo</Label>}
+                    {errors.modelo?.type === 'minLength' && <Label basic color='red' pointing>El modelo debe tener 3 caracteres mínimo</Label>}
 
                 </Form.Field>
                 <Form.Field>
                     <label>Color</label>
-                    <input placeholder="Color" 
+                    <input type="text" placeholder="Color" 
                     {
                         ...register('color', {
                             required: true,
@@ -73,7 +73,7 @@ export default function CreateCelular({ api }){
                     }
                      />
                     {errors.color?.type === 'required' && <Label basic color='red' pointing>El color es requerido</Label>}
-                    {errors.color?.type === 'minLength' && <Label basic color='red' pointing>El color debe tener 5 caracteres minimo</Label>}
+                    {errors.color?.type === 'minLength' && <Label basic color='red' pointing>El color debe tener 5 caracteres mínimo</Label>}
                 </Form.Field>
                 <Form.Field>
                     <label>Precio</label>
@@ -87,8 +87,8 @@ export default function CreateCelular({ api }){
                     {errors.precio?.type === 'required' && <Label basic color='red' pointing>El precio es requerido</Label>}
                 </Form.Field>
                 <Form.Field>
-                    <label>Descripcion</label>
-                    <input placeholder="Descripcion" 
+                    <label>Descripción</label>
+                    <input type="text" placeholder="Descripción" 
                     {
                         ...register('descripcion', {
                             required: true,
@@ -96,12 +96,12 @@ export default function CreateCelular({ api }){
                         })
                     }
                      />
-                     {errors.descripcion?.type === 'required' && <Label basic color='red' pointing>La descripcion es requerida</Label>}
-                     {errors.descripcion?.type === 'minLength' && <Label basic color='red' pointing>La descripcion debe tener 15 caracteres minimo</Label>}
+                     {errors.descripcion?.type === 'required' && <Label basic color='red' pointing>La descripción es requerida</Label>}
+                     {errors.descripcion?.type === 'minLength' && <Label basic color='red' pointing>La descripción debe tener 15 caracteres mínimo</Label>}
                 </Form.Field>
                 <Form.Field>
                     <label>Operadora</label>
-                    <input placeholder="Operadora" 
+                    <input type="text" placeholder="Operadora" 
                     {
                         ...register('operadora', {
                             required: true,
@@ -110,7 +110,7 @@ export default function CreateCelular({ api }){
                     }
                      />
                      {errors.operadora?.type === 'required' && <Label basic color='red' pointing>La operadora es requerida</Label>}
-                     {errors.operadora?.type === 'minLength' && <Label basic color='red' pointing>La operadora debe tener 5 caracteres minimo</Label>}
+                     {errors.operadora?.type === 'minLength' && <Label basic color='red' pointing>La operadora debe tener 5 caracteres mínimo</Label>}
                 </Form.Field>
                 <Button type="submit">Enviar</Button>
                 <Link to={"/celulares"}><Button color="red"><Icon link name="delete"/>Cancelar</Button></Link>
